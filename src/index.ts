@@ -6,9 +6,19 @@ import uploadRouter from "./controlador/upload";
 import errorHandler from "./middlewares/error";
 import { authenticateHandler } from "./middlewares/authenticate";
 import { authorize } from "./middlewares/authorize";
+import cors from "cors";
 
 const app = express();
-const port = 5500;
+const port =  process.env["PORT"] || 5500;
+
+
+
+// Configurar CORS para permitir solicitudes desde el frontend
+const corsOptions = {
+  origin: process.env["CLIENT_ORIGIN"], // http:localhost:5173
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 
 app.use(express.json());
@@ -26,5 +36,8 @@ app.use(errorHandler);
 app.get("/admin", authenticateHandler, authorize("admin"), (_req, res) => {
   res.json({ ok: true, message: "Bienvenido al panel de administración" });
 });
+
+
+
 
 app.listen(port, () => console.log(`Escuchando al puerto ${port}`));
