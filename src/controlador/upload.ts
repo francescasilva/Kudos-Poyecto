@@ -1,12 +1,24 @@
 import express from "express";
 import multer from 'multer';
 
-const uploadRouter = express.Router();
-//const filesRouter = express.Router();
 
-const upload =multer({ 
-  dest: './uploads',
- })
+import * as fs from 'fs'; 
+import csv from 'csv-parser';
+
+const uploadRouter = express.Router();
+
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads')
+  },
+  filename: function (req, file, cb) {
+    
+    cb(null, file.originalname)
+  }
+})
+
+const upload = multer({ storage: storage })
 
 uploadRouter.get("/", (_req, res ) => {
   
@@ -14,13 +26,83 @@ uploadRouter.get("/", (_req, res ) => {
 
   });
 
-uploadRouter.post("/files",upload.single('archivo'), (req, res ) => {
-  console.log(req.file);
-   res.send("Todo bien!");   
+  uploadRouter.post("/files", upload.single('archivo'), (req, res) => {
+    if (!req.file) {
+      return res.status(400).json({ ok: false, message: "No se ha subido ningún archivo" });
+    }
+  
+    console.log(req.file);
+    const filepath = req.file.path;
+    const results: { id: number, name: string, email: string, age: number, role: string }[] = [];
+  
+    const validateCSV = (data: any[]) => {
+      const validRecords: any[] = [];
+      const errorRecords: any[] = [];
+    console.log(data)
+      const isValidEmail = (email: string): boolean => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      };
+  
+      data.forEach((record, index) => {
+        let isValid = true;
+        const errors: { [key: string]: string } = {};
+  
+        // Validar que exista el campo 'id'
+         if (!record.id) {
+         isValid = false;
+          errors['id'] = "El campo 'id' no puede estar vacío.";
+         }
+  
+        if (!record.name) {
+          isValid = false;
+          errors['name'] = "El campo 'name' no puede estar vacío.";
+        }
+  
+        if (!isValidEmail(record.email)) {
+          isValid = false;
+          errors['email'] = "El formato del campo 'email' es inválido.";
+        }
+  
+        if (isNaN(parseInt(record.age)) || parseInt(record.age) <= 0) {
+          isValid = false;
+          errors['age'] = "El campo 'age' debe ser un número positivo.";
+        }
+  
+        if (!record.role) {
+          isValid = false;
+          errors['role'] = "El campo 'role' no puede estar vacío.";
+        }
+  
+        if (isValid) {
+          validRecords.push(record);
+        } else {
+          errorRecords.push({ row: index + 1, details: errors });
+        }
+      });
+  
+      return { isValid: errorRecords.length === 0, data: { success: validRecords, errors: errorRecords } };
+    };
+  
+    fs.createReadStream(filepath)
+    .pipe(csv({ separator: ';' }))
+      .on('data', (data) => results.push(data))
+      .on('end', () => {
+        console.log(results);
+        const validationResults = validateCSV(results);
+        if (validationResults.isValid) {
+          res.json({ ok: true, message: "Los datos son válidos", data: validationResults.data });
+        } else {
+          res.status(400).json({ ok: false, message: "Hubo errores en los datos", errors: validationResults.data.errors });
+        }
+       
+      });
+      return 
   });
-
-
-
-
-
-export default uploadRouter; //filesRouter;
+export default uploadRouter; 
+// const results: { id: number, name: string,email: string, age: number, role: string }[] = [];
+// fs.createReadStream('uploads\\prueba.csv')
+// .pipe(csv({}))
+// .on('data', (data) => results.push(data))
+// .on('end', () => {
+//   console.log(results);

@@ -1,0 +1,6 @@
+id;name;email;age;role
+1;Juan;Juan@hotmail.com;20;admin
+2;Ana;;23;admin
+3;Thiago;Thiago@hotmail.com;10;user
+4;Patrick;Patrick@hotmail.com;21;user
+5;Kimberly;Kimberly@hotmail.com;;
