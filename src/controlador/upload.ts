@@ -34,10 +34,18 @@ uploadRouter.get("/", (_req, res ) => {
     console.log(req.file);
     const filepath = req.file.path;
     const results: { id: number, name: string, email: string, age: number, role: string }[] = [];
+
+    interface CSVRecord {
+      id: number;
+      name: string;
+      email: string;
+      age: number;
+      role: string;
+  }
   
-    const validateCSV = (data: any[]) => {
-      const validRecords: any[] = [];
-      const errorRecords: any[] = [];
+  const validateCSV = (data: CSVRecord[]) => {
+    const validRecords: CSVRecord[] = [];
+    const errorRecords: { row: number, details: { [key: string]: string } }[] = [];
     console.log(data)
       const isValidEmail = (email: string): boolean => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -47,12 +55,12 @@ uploadRouter.get("/", (_req, res ) => {
       data.forEach((record, index) => {
         let isValid = true;
         const errors: { [key: string]: string } = {};
-  
-        // Validar que exista el campo 'id'
-         if (!record.id) {
+
+      // Validar que exista el campo 'id'
+         if (isNaN(record.id) || record.id <= 0) {
          isValid = false;
-          errors['id'] = "El campo 'id' no puede estar vacío.";
-         }
+      errors['id'] = "El campo 'id' debe ser un número positivo.";
+    }
   
         if (!record.name) {
           isValid = false;
@@ -64,7 +72,7 @@ uploadRouter.get("/", (_req, res ) => {
           errors['email'] = "El formato del campo 'email' es inválido.";
         }
   
-        if (isNaN(parseInt(record.age)) || parseInt(record.age) <= 0) {
+        if (isNaN(record.age) || record.age <= 0) {
           isValid = false;
           errors['age'] = "El campo 'age' debe ser un número positivo.";
         }
@@ -86,7 +94,16 @@ uploadRouter.get("/", (_req, res ) => {
   
     fs.createReadStream(filepath)
     .pipe(csv({ separator: ';' }))
-      .on('data', (data) => results.push(data))
+      .on('data', (data) => {
+        results.push({
+          id: parseInt(data.id, 10),
+          name: data.name,
+          email: data.email,
+          age: parseInt(data.age, 10),
+          role: data.role
+        });
+      })
+
       .on('end', () => {
         console.log(results);
         const validationResults = validateCSV(results);
