@@ -1,12 +1,13 @@
-# Kudos-Poyecto
+# Kudos-Poyecto 
+
 Es un sistena de carga y validacion de datos con autenticacion 
 
-//Para instalar y ejecutar el proyecto, sigue estos pasos:
+**Para instalar y ejecutar el proyecto, sigue estos pasos**
 git clone git@github.com:francescasilva/Kudos-Poyecto.git
 
-//Instalar dependecias: npm install
+**Instalar dependecias: npm install**
 
-//Configura las variables de entorno en un archivo .env:
+**Configura las variables de entorno en un archivo .env**
 colocar tu informacion de base de datos
 PGHOST=localhost
 PGDATABASE=users
@@ -17,7 +18,7 @@ PGADMINDATABASE=postgres
 PORT=5500
 CLIENT_ORIGIN=*
 
-*Características
+**Características**
 
 --Permite cargar datos
  .Agregue un archivo controlador, para manejar la carga del archivos csv
