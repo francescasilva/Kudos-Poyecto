@@ -1,6 +1,6 @@
 # Kudos-Poyecto 
 
-Es un sistena de carga y validacion de datos con autenticacion 
+Es un sistema de carga y validacion de datos con autenticacion 
 
 **Para instalar y ejecutar el proyecto, sigue estos pasos**
 
