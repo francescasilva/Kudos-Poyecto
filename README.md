@@ -6,7 +6,10 @@ Es un sistema de carga y validacion de datos con autenticacion
 
 git clone git@github.com:francescasilva/Kudos-Poyecto.git
 
-**Instalar dependecias: npm install**
+**Instalar dependecias: **
+```
+npm install
+```
 
 **Configura las variables de entorno en un archivo .env**
 
