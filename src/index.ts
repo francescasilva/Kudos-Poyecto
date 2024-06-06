@@ -37,7 +37,5 @@ app.get("/admin", authenticateHandler, authorize("admin"), (_req, res) => {
   res.json({ ok: true, message: "Bienvenido al panel de administración" });
 });
 
-
-
-
 app.listen(port, () => console.log(`Escuchando al puerto ${port}`));
+export default app;
