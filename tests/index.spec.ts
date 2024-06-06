@@ -1,6 +1,6 @@
 import request from 'supertest';
 import { describe, it, expect } from 'vitest';
-import app from '../index';  // exportar  app desde index.ts
+import app from '../src/index';  // exportar  app desde index.ts
 
 describe('GET /', () => {
 
