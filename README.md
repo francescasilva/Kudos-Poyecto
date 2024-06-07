@@ -1,5 +1,5 @@
 # Kudos-Poyecto 
-# Sistema de Carga y Validación de Datos con Autenticación
+##  Validación de archivos CSV  con Autenticación
 
 ## Funcionalidad
 
@@ -12,8 +12,7 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 - **PostgreSQL**: para almacenamiento de datos.
 - **Middlewares**: Autenticación/Autorización, Uso de JWT para manejar sesiones de usuario y control de acceso.
 - **Testing:** Vitest
-
-## Backend (Express + PostgreSQL)
+- - **TypeScript** 
 
 ### Endpoints
 
