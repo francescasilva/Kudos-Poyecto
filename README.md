@@ -62,6 +62,7 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
     ]
   }
 }
+```
 
 
 ### **Requiere autenticación para acceder a ciertas funcionalidades**
