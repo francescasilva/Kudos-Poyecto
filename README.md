@@ -10,7 +10,8 @@ git clone git@github.com:francescasilva/Kudos-Poyecto.git
 ```
 npm install
 ```
-![TypeScript Icon](https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg){width=100px}
+![TypeScript Icon](![image](https://github.com/francescasilva/Kudos-Poyecto/assets/151888611/7a5003c5-d9e6-45c2-91c0-2b789117c960)
+)
 **Configura las variables de entorno en un archivo .env**
 
 colocar tu informacion de base de datos
