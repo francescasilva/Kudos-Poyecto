@@ -97,15 +97,9 @@ CLIENT_ORIGIN=*
 ```
 
 
-### **Realiza validaciones de los datos cargados**
-
-- Con cvs parser lo utilice para leer los archivos csv
-
-- Al finalizar la lectura del archivo si hay datos que estan vacios y que no se cumplio con los requerimientos solcitados como el name, email, age y  role te envira los errores y en caso los datos sean correctos te mostrara todos los datos validados 
-
 ### **Requiere autenticación para acceder a ciertas funcionalidades**
 
-- Agregue el archivo auth router para registro,login de un usuario y autenticacion de funcionalidade a admin. 
+-  El archivo auth router nos ayuda con ek  registro,login de un usuario y autenticacion de funcionalidade a admin. 
 
 - Agregue middlewares para la autenticacion, autorizacion, errores y validacion.
  
