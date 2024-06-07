@@ -14,6 +14,7 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 - **Testing:** Vitest
 - **TypeScript** 
 
+![image](https://github.com/francescasilva/Kudos-Poyecto/assets/151888611/55c290ed-a13e-4668-8c5c-0d7562b59c62)
 ### Endpoints
 
 - **Autenticación**: Endpoint `/login` para autenticación de usuarios, que verifica credenciales (email y password) y retorna un token JWT.
