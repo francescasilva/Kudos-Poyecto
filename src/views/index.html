@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head> 
-<body>
-    <h1>Subir archivo</h1>
-    <form action="/upload/files" method="post" enctype="multipart/form-data" >
-    <input type="file" name="archivo" multiple>
-    <input type="submit" value="Enviar">
-    </form>
-</body> 
+<body style="display: flex; justify-content: center; align-items: center; height: 10vh; margin: 0; margin-top: 130px;">
+    <div style="text-align: center; margin-top: 20px;">
+        <h1>Subir archivo CSV</h1>
+        <form action="/upload/files" method="post" enctype="multipart/form-data">
+            <input type="file" name="archivo" multiple style="margin-bottom: 25px;">
+            <br>
+            <input type="submit" value="Enviar" style="background-color:#8A2BE2; /* Lila */
+                                                      border: none;
+                                                      color: white;
+                                                      padding: 10px 20px;
+                                                      text-align: center;
+                                                      text-decoration: none;
+                                                      display: inline-block;
+                                                      font-size: 16px;
+                                                      font-weight: bold;
+                                                      margin: 4px 2px;
+                                                      cursor: pointer;
+                                                      border-radius: 20px;">
+        </form>
+    </div>
+</body>
 </html>
