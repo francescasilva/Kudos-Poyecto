@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "tsc && mkdir -p build/src/views && cp -R src/*/.html build/src/views/",
+    "build": "tsc && mkdir -p build/src/views && cp -R src/**/*.html build/src/views/",
     "start": "node build/src/index.js",
     "test": "vitest"
   },
