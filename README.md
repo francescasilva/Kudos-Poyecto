@@ -99,7 +99,6 @@ PGADMINDATABASE=[admin-database]
 PORT=[puerto]
 
 CLIENT_ORIGIN=*
-```
 ```css
 ```css
 pre code.bash {
