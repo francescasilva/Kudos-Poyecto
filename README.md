@@ -14,7 +14,7 @@ Es una aplicación Back-End que nos permita a los usuarios autenticados, especí
 - **PostgreSQL**: para almacenamiento de datos.
 - **Middlewares**: Autenticación/Autorización, Uso de JWT para manejar sesiones de usuario y control de acceso.
 - **Testing:** Vitest/Supertest
-- **TypeScript**: lenguaje de programcación
+- **TypeScript**: lenguaje de programación
   
 ### Endpoints
 
