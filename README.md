@@ -13,7 +13,7 @@ Es una aplicación Back-End que nos permita a los usuarios autenticados, especí
 - **Express**: para manejar la lógica del servidor.
 - **PostgreSQL**: para almacenamiento de datos.
 - **Middlewares**: Autenticación/Autorización, Uso de JWT para manejar sesiones de usuario y control de acceso.
-- **Testing:** Vitest
+- **Testing:** Vitest/Supertest
 - **TypeScript**: lenguaje de programcación
   
 ### Endpoints
