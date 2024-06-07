@@ -9,12 +9,12 @@ Es una aplicación Back-End que nos permita a los usuarios autenticados, especí
 
 ![image](https://github.com/francescasilva/Kudos-Poyecto/assets/151888611/23efd090-68f2-4c41-a63f-142b9d53871c)
 
-- **Node**
+- **Node**: nos permite desarrollar la aplicacion del lado del servidor
 - **Express**: para manejar la lógica del servidor.
 - **PostgreSQL**: para almacenamiento de datos.
 - **Middlewares**: Autenticación/Autorización, Uso de JWT para manejar sesiones de usuario y control de acceso.
 - **Testing:** Vitest
-- **TypeScript**
+- **TypeScript**: lenguaje de programcación
   
 ### Endpoints
 
