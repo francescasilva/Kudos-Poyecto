@@ -35,40 +35,36 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 - Con cvs parser cumple la funcion leer los archivos csv
 
 - Al finalizar la lectura del archivo si hay datos que estan vacios y que no se cumplio con los requerimientos solicitados como el name, email, age y  role te enviara los errores y en caso los datos sean correctos te mostrara todos los datos validados
-  <blockquote>
   
-
-<pre><code style="color:#228B22;">
-  {
-	"ok": true,
-	"data": {
-
-	  "success": [
-	    {
-	      "id": 1,
-	      "name": "Thiago Silva",
-	      "email": "thiago.silva@example.com",
-	      "age": 10
-	    }
-	    // Otros registros exitosos...
-	  ],
-
-	  "errors": [
-	    {
-	      "row": 4,
-	      "details": {
-	        "name": "El campo 'name' no puede estar vacío.",
-	        "email": "El formato del campo 'email' es inválido.",
-	        "age": "El campo 'age' debe ser un número positivo."
-	      }
-	    }
-	    // Otros registros con errores...
-	  ]
-	}
+ <blockquote>
+  <pre><code style="color:#228B22;">
+{
+  "ok": true,
+  "data": {
+    "success": [
+      {
+        "id": 1,
+        "name": "Thiago Silva",
+        "email": "thiago.silva@example.com",
+        "age": 10
+      }
+      // Otros registros exitosos...
+    ],
+    "errors": [
+      {
+        "row": 4,
+        "details": {
+          "name": "El campo 'name' no puede estar vacío.",
+          "email": "El formato del campo 'email' es inválido.",
+          "age": "El campo 'age' debe ser un número positivo."
+        }
+      }
+      // Otros registros con errores...
+    ]
+  }
 }
 </code></pre>
 </blockquote>
-
 
 
 ### **Requiere autenticación para acceder a ciertas funcionalidades**
