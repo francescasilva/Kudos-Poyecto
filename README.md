@@ -64,6 +64,12 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 }
 ```
 
+### **Requiere autenticación para acceder a ciertas funcionalidades**
+
+-  El archivo auth router nos ayuda con ek  registro,login de un usuario y autenticacion de funcionalidade a admin. 
+
+- Agregue middlewares para la autenticacion, autorizacion, errores y validacion.
+- 
 ### **Para instalar y ejecutar el proyecto, sigue estos pasos**
 ```
 git clone git@github.com:francescasilva/Kudos-Poyecto.git
@@ -95,13 +101,18 @@ PORT=[puerto]
 
 CLIENT_ORIGIN=*
 ```
+### **Utiliza en siguiente comando para realizar la carga de archivos csv**
+```
+npm run dev
+```
+## **Despliegue en Render**
+```
+https://kudos-poyecto.onrender.com/upload
+```
 
 
-### **Requiere autenticación para acceder a ciertas funcionalidades**
 
--  El archivo auth router nos ayuda con ek  registro,login de un usuario y autenticacion de funcionalidade a admin. 
 
-- Agregue middlewares para la autenticacion, autorizacion, errores y validacion.
  
  
 
