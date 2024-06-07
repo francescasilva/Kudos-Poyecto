@@ -31,15 +31,16 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 git clone git@github.com:francescasilva/Kudos-Poyecto.git
 ```
 
-### **Instalar dependecias: **
+### **Instalar dependeNcias**
 ```
 npm install
 ```
 
 ### **Configura las variables de entorno en un archivo .env**
 
-colocar tu informacion de base de datos
+-Colocar tu informacion de base de datos:
 
+```
 PGHOST=localhost
 
 PGDATABASE=[base-de-datos]
@@ -55,6 +56,7 @@ PGADMINDATABASE=[admin-database]
 PORT=[puerto]
 
 CLIENT_ORIGIN=*
+```
 
 ### **Características**
 
@@ -72,7 +74,7 @@ CLIENT_ORIGIN=*
 
 - Con cvs parser lo utilice para leer los archivos csv
 
-- **Al finalizar la lectura del archivo si hay datos que estan vacios y que no se cumplio con los requerimientos solcitados como el name, email, age y  role te envira los errores y en caso los datos sean correctos te mostrara todos los datos validados 
+- Al finalizar la lectura del archivo si hay datos que estan vacios y que no se cumplio con los requerimientos solcitados como el name, email, age y  role te envira los errores y en caso los datos sean correctos te mostrara todos los datos validados 
 
 ### **Requiere autenticación para acceder a ciertas funcionalidades**
 
