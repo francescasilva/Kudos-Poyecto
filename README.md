@@ -1,18 +1,18 @@
 # Kudos-Poyecto 
 ##  Validación de archivos CSV  con Autenticación
 
-## Funcionalidad
+### Funcionalidad
 
 Es aplicación Back-End que permita a los usuarios autenticados, específicamente con rol de `admin`, cargar archivos CSV para la creación de registros en una base de datos PostgreSQL. La aplicación  valida los datos del archivo CSV, permite la corrección de registros inválidos y asegura que solo usuarios autorizados realicen la carga de datos.
 
-## Tecnologías usadas:
+### Tecnologías usadas:
 
 - **Node**
 - **Express**: para manejar la lógica del servidor.
 - **PostgreSQL**: para almacenamiento de datos.
 - **Middlewares**: Autenticación/Autorización, Uso de JWT para manejar sesiones de usuario y control de acceso.
 - **Testing:** Vitest
-- - **TypeScript** 
+- **TypeScript** 
 
 ### Endpoints
 
@@ -26,7 +26,7 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 - Valida el archivo CSV (name, email, age)
 - Generar una respuesta de registros exitosos y/o  errores  por registro 
 
-**Para instalar y ejecutar el proyecto, sigue estos pasos**
+### **Para instalar y ejecutar el proyecto, sigue estos pasos**
 ```
 git clone git@github.com:francescasilva/Kudos-Poyecto.git
 ```
@@ -36,7 +36,7 @@ git clone git@github.com:francescasilva/Kudos-Poyecto.git
 npm install
 ```
 
-**Configura las variables de entorno en un archivo .env**
+### **Configura las variables de entorno en un archivo .env**
 
 colocar tu informacion de base de datos
 
@@ -56,9 +56,9 @@ PORT=[puerto]
 
 CLIENT_ORIGIN=*
 
-**Características**
+### **Características**
 
-**Permite cargar datos**
+###**Permite cargar datos**
 
  .Agregue un archivo controlador, para manejar la carga del archivos csv
 
@@ -68,13 +68,13 @@ CLIENT_ORIGIN=*
 
  .Agregue un archivo html para hacer la simulacion de subida de archivos
 
-**Realiza validaciones de los datos cargados**
+### **Realiza validaciones de los datos cargados**
 
  .Con cvs parser lo utilice para leer los archivos csv
 
  .Al finalizar la lectura del archivo si hay datos que estan vacios y que no se cumplio con los requerimientos solcitados como el name, email, age y  role te envira los errores y en caso los datos sean correctos te mostrara todos los datos validados 
 
-**Requiere autenticación para acceder a ciertas funcionalidades**
+### **Requiere autenticación para acceder a ciertas funcionalidades**
 
 Agregue el archivo auth router para registro,login de un usuario y autenticacion de funcionalidade a admin. 
 
