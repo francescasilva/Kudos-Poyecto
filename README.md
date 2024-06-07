@@ -24,21 +24,56 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 
 - Recibe archivo CSV en endpoint `/upload`
 - Valida el archivo CSV (name, email, age)
-- Generar una respuesta de registros exitosos y/o  errores  por registro 
+- Generar una respuesta de registros exitosos y/o  errores  por registro
+- El file upload maneja la carga de archivos
+- La libreria multer nos ayuda a cargar los  archivos
+- El archivo html  hace la simulacion de carga de archivos
+ 
+### **Realiza validaciones de los datos cargados**
+
+- Con cvs parser cumple la funcion leer los archivos csv
+
+- Al finalizar la lectura del archivo si hay datos que estan vacios y que no se cumplio con los requerimientos solicitados como el name, email, age y  role te enviara los errores y en caso los datos sean correctos te mostrara todos los datos validados
+
+  {
+	"ok": true,
+	"data": {
+	  "success": [
+	    {
+	      "id": 1,
+	      "name": "Juan Perez",
+	      "email": "juan.perez@example.com",
+	      "age": 28
+	    }
+	    // Otros registros exitosos...
+	  ],
+	  "errors": [
+	    {
+	      "row": 4,
+	      "details": {
+	        "name": "El campo 'name' no puede estar vacío.",
+	        "email": "El formato del campo 'email' es inválido.",
+	        "age": "El campo 'age' debe ser un número positivo."
+	      }
+	    }
+	    // Otros registros con errores...
+	  ]
+	}
+}
 
 ### **Para instalar y ejecutar el proyecto, sigue estos pasos**
 ```
 git clone git@github.com:francescasilva/Kudos-Poyecto.git
 ```
 
-### **Instalar dependeNcias**
+### **Instalar dependencias**
 ```
 npm install
 ```
 
 ### **Configura las variables de entorno en un archivo .env**
 
--Colocar tu informacion de base de datos:
+- Colocar tu informacion de base de datos:
 
 ```
 PGHOST=localhost
@@ -58,17 +93,6 @@ PORT=[puerto]
 CLIENT_ORIGIN=*
 ```
 
-### **Características**
-
-- Permite cargar datos
-
-- Agregue un archivo controlador, para manejar la carga del archivos csv
-
-- Cree un ruta /upload donde se realizara la carga de archivos
-
-- Con la libreria multer pude subir archivos
-
-- Agregue un archivo html para hacer la simulacion de subida de archivos
 
 ### **Realiza validaciones de los datos cargados**
 
