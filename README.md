@@ -13,7 +13,7 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 - **Middlewares**: Autenticación/Autorización, Uso de JWT para manejar sesiones de usuario y control de acceso.
 - **Testing:** Vitest
 - **TypeScript** 
-![image](https://github.com/francescasilva/Kudos-Poyecto/assets/151888611/55c290ed-a13e-4668-8c5c-0d7562b59c62)
+![image](https://github.com/francescasilva/Kudos-Poyecto/assets/151888611/23efd090-68f2-4c41-a63f-142b9d53871c)
 ### Endpoints
 
 - **Autenticación**: Endpoint `/login` para autenticación de usuarios, que verifica credenciales (email y password) y retorna un token JWT.
