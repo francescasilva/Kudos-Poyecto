@@ -37,7 +37,7 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 - Al finalizar la lectura del archivo si hay datos que estan vacios y que no se cumplio con los requerimientos solicitados como el name, email, age y  role te enviara los errores y en caso los datos sean correctos te mostrara todos los datos validados
   <blockquote>
   
-```
+
 <pre><code style="color:#228B22;">
   {
 	"ok": true,
@@ -69,7 +69,7 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 </code></pre>
 </blockquote>
 
-```
+
 
 ### **Requiere autenticación para acceder a ciertas funcionalidades**
 
