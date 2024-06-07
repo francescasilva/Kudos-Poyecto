@@ -100,6 +100,16 @@ PORT=[puerto]
 
 CLIENT_ORIGIN=*
 ```
+```css
+```css
+pre code.bash {
+  background-color: #f0f0f0; /* Color de fondo */
+  color: #333; /* Color del texto */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+}
+
 ### **Utiliza en siguiente comando para inicializar el proyecto**
 ```
 npm run dev
