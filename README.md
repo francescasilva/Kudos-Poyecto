@@ -83,7 +83,7 @@ npm install
 
 - Colocar tu informacion de base de datos:
 
-```
+```bash
 PGHOST=localhost
 
 PGDATABASE=[base-de-datos]
