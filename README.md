@@ -66,7 +66,7 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 
 ### **Requiere autenticación para acceder a ciertas funcionalidades**
 
--  El archivo auth router nos ayuda con ek  registro,login de un usuario y autenticacion de funcionalidade a admin. 
+-  El archivo auth router nos ayuda con el registro,login de un usuario y autenticacion de funcionalidades a admin. 
 - Agregue middlewares para la autenticacion, autorizacion, errores y validacion.
   
 ### **Para instalar y ejecutar el proyecto, sigue estos pasos**
