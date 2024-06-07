@@ -6,14 +6,15 @@
 Es aplicación Back-End que permita a los usuarios autenticados, específicamente con rol de `admin`, cargar archivos CSV para la creación de registros en una base de datos PostgreSQL. La aplicación  valida los datos del archivo CSV, permite la corrección de registros inválidos y asegura que solo usuarios autorizados realicen la carga de datos.
 
 ### Tecnologías usadas:
+![image](https://github.com/francescasilva/Kudos-Poyecto/assets/151888611/23efd090-68f2-4c41-a63f-142b9d53871c)
 
 - **Node**
 - **Express**: para manejar la lógica del servidor.
 - **PostgreSQL**: para almacenamiento de datos.
 - **Middlewares**: Autenticación/Autorización, Uso de JWT para manejar sesiones de usuario y control de acceso.
 - **Testing:** Vitest
-- **TypeScript** 
-![image](https://github.com/francescasilva/Kudos-Poyecto/assets/151888611/23efd090-68f2-4c41-a63f-142b9d53871c)
+- **TypeScript**
+  
 ### Endpoints
 
 - **Autenticación**: Endpoint `/login` para autenticación de usuarios, que verifica credenciales (email y password) y retorna un token JWT.
