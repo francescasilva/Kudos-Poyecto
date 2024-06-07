@@ -42,9 +42,9 @@ Es aplicación Back-End que permita a los usuarios autenticados, específicament
 	  "success": [
 	    {
 	      "id": 1,
-	      "name": "Juan Perez",
-	      "email": "juan.perez@example.com",
-	      "age": 28
+	      "name": "Thiago Silva",
+	      "email": "thiago.silva@example.com",
+	      "age": 10
 	    }
 	    // Otros registros exitosos...
 	  ],
