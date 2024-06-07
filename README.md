@@ -10,7 +10,7 @@ git clone git@github.com:francescasilva/Kudos-Poyecto.git
 ```
 npm install
 ```
-![TypeScript Icon](![Uploading image.png…]()
+[![TypeScript Icon](![Uploading image.png…]()](https://github.com/francescasilva/Kudos-Poyecto/issues/new)
 )
 )
 **Configura las variables de entorno en un archivo .env**
