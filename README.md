@@ -106,9 +106,10 @@ CLIENT_ORIGIN=*
 npm run dev
 ```
 ## **Despliegue en Render**
-```
-https://kudos-poyecto.onrender.com/upload
-```
+
+`<link>` : <https://kudos-poyecto.onrender.com/upload>
+
+
 
 
 
